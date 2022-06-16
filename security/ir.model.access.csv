@@ -1,0 +1,10 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"hms_patient_normal_user_id","hms_patient_normal_user","model_hms_patient","hms_user_member_view",1,1,1,0
+"hms_department_normal_user_id","hms_department_normal_user","model_hms_department","hms_user_member_view",1,0,0,0
+"hms_doctor_normal_user_id","hms_doctor_normal_user","model_hms_doctors","hms_user_member_view",1,0,0,0
+"hms_log_normal_user_id","hms_log_normal_user","model_log_record","hms_user_member_view",1,0,0,0
+
+"hms_patient_manager_user_id","hms_patient_manager_user","model_hms_patient","hms_manager_member_view",1,1,1,1
+"hms_department_manager_user_id","hms_department_manager_user","model_hms_department","hms_manager_member_view",1,1,1,1
+"hms_doctor_manager_user_id","hms_doctor_manager_user","model_hms_doctors","hms_manager_member_view",1,1,1,1
+"hms_log_manager_user_id","hms_log_manager_user","model_log_record","hms_manager_member_view",1,1,1,1

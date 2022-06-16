@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="login_tree" model="ir.ui.view">
+            <field name="name">login Tree</field>
+            <field name="model">log.record</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="write_uid"/>
+                    <field name="write_date"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+        <record id="login_form" model="ir.ui.view">
+            <field name="name">login form</field>
+            <field name="model">log.record</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="description"/>
+                    <field name="patient_id"/>
+                </form>
+            </field>
+        </record>
+        <menuitem id="hms_menu_root" name="HMS_PATIENT"/>
+        <menuitem id="login_record_item" name="login" parent="hms_menu_root"/>
+    </data>
+</odoo>
