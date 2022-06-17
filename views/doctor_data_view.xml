@@ -34,7 +34,7 @@
         <menuitem id="doctor_menu_root" name="Doctor"
                   parent="hms_menu_root"
                   action="doctor_action"
-                  groups="HMS.hms_manager_member_view"
+                  groups="Hospital-Managment-System.hms_manager_member_view"
         />
     </data>
 </odoo>
