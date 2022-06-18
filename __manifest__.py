@@ -2,7 +2,7 @@
     "name": "HMS Patient",
     "author": "Ahmed",
     "description": "this is hospital management system ",
-    "depends": ["crm"],
+    "depends": ["hr", "crm"],
     "data": [
         'report/patient_report_templates.xml',
         'report/patient_report.xml',
