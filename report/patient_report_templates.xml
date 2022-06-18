@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <template id="report_patient">
+        <template id="report_patient_template">
             <t t-call="web.html_container">
                 <t t-call="web.external_layout">
                     <t t-foreach="docs" t-as="o">
@@ -18,6 +18,8 @@
                                                      t-att-title="o.first_name" t-att-alt="Image"
                                                      style="max-height:5cm; max-width:5cm;"/>
                                             </t>
+                                            <!--                                             <img t-else="" class="rounded-circle mt-1 o_portal_contact_img"-->
+                                            <!--                                             src="/web/static/src/img/user_menu_avatar.png" alt="Contact"/>-->
                                         </div>
                                     </div>
                                     <br/>
@@ -95,33 +97,35 @@
                                         </div>
                                     </div>
                                     <!--Log History Table -->
-                                    <h3 style="text-align: center;color:red;">Log History</h3>
-                                    <div class="row" style="margin:auto">
-                                        <table class="table table-striped table-hover">
-                                            <thead>
-                                                <tr class="table-primary">
-                                                    <th>User</th>
-                                                    <th>Date</th>
-                                                    <th>Info</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <t t-foreach="o.new_registration_history" t-as="patient_history">
-                                                    <tr>
-                                                        <td>
-                                                            <span t-field="patient_history.write_uid"/>
-                                                        </td>
-                                                        <td>
-                                                            <span t-field="patient_history.write_date"/>
-                                                        </td>
-                                                        <td>
-                                                            <span t-field="patient_history.description"/>
-                                                        </td>
+                                    <t t-if="o.new_registration_history">
+                                        <h3 style="text-align: center;color:red;">Log History</h3>
+                                        <div class="row" style="margin:auto">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr class="table-primary">
+                                                        <th>User</th>
+                                                        <th>Date</th>
+                                                        <th>Info</th>
                                                     </tr>
-                                                </t>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                </thead>
+                                                <tbody>
+                                                    <t t-foreach="o.new_registration_history" t-as="patient_history">
+                                                        <tr>
+                                                            <td>
+                                                                <span t-field="patient_history.write_uid"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-field="patient_history.write_date"/>
+                                                            </td>
+                                                            <td>
+                                                                <span t-field="patient_history.description"/>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </t>
                                 </div>
                             </div>
                         </div>
