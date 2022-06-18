@@ -3,7 +3,7 @@ import re
 from datetime import date
 from odoo import models, fields, api
 from odoo.exceptions import UserError
-from odoo.modules import get_module_resource
+from odoo.modules.module import get_module_resource
 
 
 class hmsPatient(models.Model):
