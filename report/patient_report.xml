@@ -2,9 +2,9 @@
     <data>
        <report
           id="report_patient"
-          name="HMS.report_patient"
+          name="Hospital-Managment-System.report_patient_template"
           string="patient Report"
-          report_type="qweb-html"
+          report_type="qweb-pdf"
           model="hms.patient"
        />
     </data>
